@@ -14,7 +14,7 @@
                  [plot-y-label  #f])
     (define xs (seq-inv 16))
     (define ys (seq-fn 16 fn))
-    (plot (points (map vector xs ys)))))
+    (plot (points (map vector xs ys) #:size 3))))
 
 ;; Group I
 (list
