@@ -5,13 +5,14 @@
 
 (define (seq-fn n fn) (rest (build-list (add1 n) fn)))
 (define (seq n) (seq-fn n values))
+(define (seq-inv n) (seq-fn n (lambda (n) (if (= n 0) 0 (/ (- 1) n)))))
 
 (define (cartesian fn)
   (parameterize ([plot-width    150]
                  [plot-height   150]
                  [plot-x-label  #f]
                  [plot-y-label  #f])
-    (define xs (seq 16))
+    (define xs (seq-inv 16))
     (define ys (seq-fn 16 fn))
     (plot (points (map vector xs ys)))))
 
