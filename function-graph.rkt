@@ -12,24 +12,24 @@
 
 ;; Group I
 (list
- (cartesian 16 (lambda (n) (if (= n 0) 0 (/ 1 n))))
- (cartesian 16 (lambda (n) (if (= n 0) 0 (/ (- 1 n) n))))
- (cartesian 16 (lambda (n) (if (= n 0) 0 (/ (sin n) n))))
- (cartesian 16 (lambda (n) (if (= n 0) 0 (/ (abs n) n))))
+ (cartesian (* 2 pi) (lambda (n) (if (= n 0) 0 (/ 1 n))))
+ (cartesian (* 2 pi) (lambda (n) (if (= n 0) 0 (/ (- n 1) n))))
+ (cartesian (* 2 pi) (lambda (n) (if (= n 0) 0 (/ (sin n) n))))
+ (cartesian (* 2 pi) (lambda (n) (if (= n 0) 0 (/ (abs n) n))))
  )
 
 ;; Group II
 (list
- (cartesian 16 (lambda (n) (if (= n 0) 0 (/ (- 1 (* n n)) n))))
- (cartesian 16 (lambda (n) (if (= n 0) 0 (/ (- (* n n) 1) n))))
- (cartesian 16 (lambda (n) n))
- (cartesian 16 (lambda (n) (expt 2 n)))
+ (cartesian (* 2 pi) (lambda (n) (if (= n 0) 0 (/ (- 1 (* n n)) n))))
+ (cartesian (* 2 pi) (lambda (n) (if (= n 0) 0 (/ (- (* n n) 1) n))))
+ (cartesian (* 2 pi) (lambda (n) n))
+ (cartesian (* 2 pi) (lambda (n) (expt 2 n)))
  )
 
 ;; Group III
 (list
- (cartesian 16 sin)
- (cartesian 16 (lambda (n) (+ 1 (sin n))))
- (cartesian 16 cos)
- (cartesian 16 (lambda (n) (abs (sin n))))
+ (cartesian (* 2 pi) sin)
+ (cartesian (* 2 pi) (lambda (n) (+ 1 (sin n))))
+ (cartesian (* 2 pi) cos)
+ (cartesian (* 2 pi) (lambda (n) (abs (sin n))))
  )
