@@ -9,7 +9,6 @@
 (test-= "differential" (differential sin .5 .1) (- (sin (+ .5 .1)) (sin .5)) 0.001)
 
 
-
 ;; Function Number Number -> Number
 ;; Produce a derivative value approximation
 ;; given function f, a value to evaluate f, and a step
@@ -19,10 +18,11 @@
 (test-= "deriv-approx" (deriv-approx sin .5 .1) (/ (- (sin (+ .5 .1)) (sin .5)) .1) 0.001)
 
 
-
-;; Function Number Number Number Number Function -> Number
+;; Number Number Natural Number Function -> Number
 ;; Produce an approximate value of a funtion given
-;; x y end-x deriv h
+;; initial-x initial-y number-of-iterations step-size derivative-function
+;; Method repeats linear approximation from the initial-x for a number of iterations
+;; Each iteration uses the value of the previous approximation plus (* h derivative-at-x)
 (define (euler x y iter h deriv)
   (cond ((= iter 0) y)
         (else (euler (+ x h)
