@@ -68,12 +68,15 @@
 (define (term coefficient degree) (lambda (x) (* coefficient (expt x degree))))
 (define (poly-terms coefficients acc)
   (cond ((empty? coefficients) acc)
-        (else
-         (poly-terms (rest coefficients) (cons (term (first coefficients) (sub1 (length coefficients))) acc)))))
+        (else (poly-terms
+               (rest coefficients)
+               (cons (term (first coefficients) (sub1 (length coefficients))) acc)))))
 (define (poly-apply x terms acc)
   (cond ((empty? terms) acc)
-        (else
-         (poly-apply x (rest terms) (+ ((first terms) x) acc)))))
+        (else (poly-apply
+               x
+               (rest terms)
+               (+ ((first terms) x) acc)))))
 (define (polynomial coefficients)
   (lambda (x) (poly-apply x (poly-terms coefficients empty) 0)))
 (define p1 (polynomial (list -4 -2 -2 -3)))
@@ -86,3 +89,33 @@
 (test-= "polynomial" (newton p3 -2 .0001 2) -1.431794 0.0001)
 (test-= "polynomial" (newton p4 -2 .0001 2) -1.585160 0.0001)
 (test-= "polynomial" (newton p5 4 .0001 2) 4.425295 0.0001)
+
+(define (poly coefficients)
+  (local (;; produce the expression of the poly
+          (define (poly-apply x terms acc)
+            (cond ((empty? terms) acc)
+                  (else (poly-apply
+                         x
+                         (rest terms)
+                         (+ ((first terms) x) acc)))))
+          ;; produce a list of terms
+          (define (poly-terms cs acc)
+            (cond ((empty? cs) acc)
+                  (else (poly-terms
+                         (rest cs)
+                         (cons (term (first cs) (sub1 (length cs))) acc)))))
+          ;; produce a term
+          (define (term coefficient degree)
+            (lambda (x) (* coefficient (expt x degree))))
+          )
+    (lambda (x) (poly-apply x (poly-terms coefficients empty) 0))))
+(define poly1 (poly (list -4 -2 -2 -3)))
+(define poly2 (poly (list 3 -6 4 -4 -3 -3)))
+(define poly3 (poly (list 5 0 -5 7)))
+(define poly4 (poly (list -6 -5 7 1 -2 -2)))
+(define poly5 (poly (list -1 5 -4 6 -2 3)))
+(test-= "poly" (newton poly1 -2 .0001 2) -1.058263 0.0001)
+(test-= "poly" (newton poly2 0 .00001 2) (/ -39 56) 0.0001) ; note this needs a smaller step for same level of error
+(test-= "poly" (newton poly3 -2 .0001 2) -1.431794 0.0001)
+(test-= "poly" (newton poly4 -2 .0001 2) -1.585160 0.0001)
+(test-= "poly" (newton poly5 4 .0001 2) 4.425295 0.0001)
