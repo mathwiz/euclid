@@ -61,3 +61,28 @@
 ;; Tests
 (test-= "newton" (newton (lambda (x) (+ (expt x 3) (* -1 (* x x)) 3)) -1 .01 4) -1.1746 0.1)
 (test-= "newton" (newton (lambda (x) (+ (expt x 3) (* -3 (* x x)) 3)) -1 .01 4) -0.87939 0.1)
+
+
+;; Produce a polynomial function in one variable with the coeffiecients
+;; given as a list of their values
+(define (term coefficient degree) (lambda (x) (* coefficient (expt x degree))))
+(define (poly-terms coefficients acc)
+  (cond ((empty? coefficients) acc)
+        (else
+         (poly-terms (rest coefficients) (cons (term (first coefficients) (sub1 (length coefficients))) acc)))))
+(define (poly-apply x terms acc)
+  (cond ((empty? terms) acc)
+        (else
+         (poly-apply x (rest terms) (+ ((first terms) x) acc)))))
+(define (polynomial coefficients)
+  (lambda (x) (poly-apply x (poly-terms coefficients empty) 0)))
+(define p1 (polynomial (list -4 -2 -2 -3)))
+(define p2 (polynomial (list 3 -6 4 -4 -3 -3)))
+(define p3 (polynomial (list 5 0 -5 7)))
+(define p4 (polynomial (list -6 -5 7 1 -2 -2)))
+(define p5 (polynomial (list -1 5 -4 6 -2 3)))
+(test-= "polynomial" (newton p1 -2 .0001 2) -1.058263 0.0001)
+(test-= "polynomial" (newton p2 0 .00001 2) (/ -39 56) 0.0001) ; note this needs a smaller step for same level of error
+(test-= "polynomial" (newton p3 -2 .0001 2) -1.431794 0.0001)
+(test-= "polynomial" (newton p4 -2 .0001 2) -1.585160 0.0001)
+(test-= "polynomial" (newton p5 4 .0001 2) 4.425295 0.0001)
