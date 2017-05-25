@@ -1,7 +1,7 @@
 #lang racket
 (require rackunit)
 
-;; Function Number Number -> Number
+;; (Number -> Number) Number Number -> Number
 ;; Produce a difference given function f, a value to evaluate f, and a step
 (define (differential f x h)
   (- (f (+ x h)) (f x)))
@@ -9,13 +9,22 @@
 (test-= "differential" (differential sin .5 .1) (- (sin (+ .5 .1)) (sin .5)) 0.001)
 
 
-;; Function Number Number -> Number
+;; (Number -> Number) Number Number -> Number
 ;; Produce a derivative value approximation
 ;; given function f, a value to evaluate f, and a step
 (define (deriv-approx f x h)
   (/ (differential f x h) h))
 ;; Tests
 (test-= "deriv-approx" (deriv-approx sin .5 .1) (/ (- (sin (+ .5 .1)) (sin .5)) .1) 0.001)
+
+
+;; (Number -> Number) Number -> (Number -> Number) 
+;; Produce a function that is an approximate derivative given a step size
+;(define (derivative fn h) (lambda (x) 0)) ; stub
+(define (derivative fn h)
+  (lambda (x) (deriv-approx fn x h)))
+;; Tests
+(test-= "derivative" ((derivative sin .01) .5) (cos .5) 0.01)
 
 
 ;; Helper
@@ -46,7 +55,7 @@
   (cond ((= iter 0) guess)
         (else (newton
                fn
-               (- guess (/ (fn guess) (deriv-approx fn guess h)))
+               (- guess (/ (fn guess) ((derivative fn h) guess)))
                h
                (sub1 iter)))))
 ;; Tests
