@@ -1,0 +1,663 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.1' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     22719,        655]
+NotebookOptionsPosition[     20623,        595]
+NotebookOutlinePosition[     20965,        610]
+CellTagsIndexPosition[     20922,        607]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"z", "=", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"\"\<Z\>\"", "\[Rule]", "\"\<D\>\""}], ",", " ", "8"}], "}"}], 
+     ",", " ", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"\"\<Z\>\"", "\[Rule]", "\"\<E\>\""}], ",", " ", "2"}], 
+      "}"}]}], "}"}]}], "\[IndentingNewLine]"}]], "Input",
+ CellChangeTimes->{{3.717594955164917*^9, 3.7175950465489054`*^9}, {
+  3.7175975089744987`*^9, 3.7175975095675526`*^9}, {3.7175975658468933`*^9, 
+  3.7175975659499445`*^9}},ExpressionUUID->"039f3789-8b75-4fcd-a5c8-\
+ba3e24774d8a"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"\<\"Z\"\>", "\[Rule]", "\<\"D\"\>"}], ",", "8"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"\<\"Z\"\>", "\[Rule]", "\<\"E\"\>"}], ",", "2"}], "}"}]}], 
+  "}"}]], "Output",
+ CellChangeTimes->{3.717595054593959*^9, 3.7175975126105223`*^9, 
+  3.7175975708389254`*^9},ExpressionUUID->"5cf2514b-6c6e-40a3-8530-\
+d10db9773540"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"TreePlot", "[", 
+   RowBox[{"z", ",", " ", 
+    RowBox[{"VertexLabeling", "\[Rule]", "True"}]}], "]"}], " "}]], "Input",
+ CellChangeTimes->{{3.7175950796021366`*^9, 
+  3.7175950964432535`*^9}},ExpressionUUID->"79c54792-e9aa-4306-b3a5-\
+e9206646b308"],
+
+Cell[BoxData[
+ GraphicsBox[
+  TagBox[GraphicsComplexBox[{{0.4472135954999579, 0.8944271909999159}, {0., 
+    0.}, {0.8944271909999159, 0.}}, {
+     {RGBColor[0.5, 0., 0.], 
+      {Arrowheads[{{0.5, 0.5, 
+          GraphicsBox[{
+            GrayLevel[0], 
+            InsetBox[
+             BoxData[
+              FormBox[
+               StyleBox["8", StripOnInput -> False], TraditionalForm]], {0, 
+             0}, 
+             ImageScaled[{0.5, 0.5}], Automatic, None, Background -> 
+             GrayLevel[1]]}]}, {0, 0}}], ArrowBox[{1, 2}]}, 
+      {Arrowheads[{{0.5, 0.5, 
+          GraphicsBox[{
+            GrayLevel[0], 
+            InsetBox[
+             BoxData[
+              FormBox[
+               StyleBox["2", StripOnInput -> False], TraditionalForm]], {0, 
+             0}, 
+             ImageScaled[{0.5, 0.5}], Automatic, None, Background -> 
+             GrayLevel[1]]}]}, {0, 0}}], ArrowBox[{1, 3}]}}, {InsetBox[
+       FrameBox["\<\"Z\"\>",
+        Background->RGBColor[1, 1, 0.8],
+        FrameStyle->RGBColor[0.94, 0.85, 0.36],
+        StripOnInput->False], 1], InsetBox[
+       FrameBox["\<\"D\"\>",
+        Background->RGBColor[1, 1, 0.8],
+        FrameStyle->RGBColor[0.94, 0.85, 0.36],
+        StripOnInput->False], 2], InsetBox[
+       FrameBox["\<\"E\"\>",
+        Background->RGBColor[1, 1, 0.8],
+        FrameStyle->RGBColor[0.94, 0.85, 0.36],
+        StripOnInput->False], 3]}}],
+   Annotation[#, 
+    VertexCoordinateRules -> {{0.4472135954999579, 0.8944271909999159}, {0., 
+     0.}, {0.8944271909999159, 0.}}]& ],
+  AspectRatio->1.,
+  FrameTicks->None,
+  PlotRange->All,
+  PlotRangePadding->Scaled[0.1]]], "Output",
+ CellChangeTimes->{3.717595098518216*^9, 3.7175975165695534`*^9, 
+  3.717597575745962*^9},ExpressionUUID->"e709f9f7-916c-4220-8f85-\
+cc3a129149da"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"y", " ", "=", " ", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"\"\<Y\>\"", "\[Rule]", "\"\<B\>\""}], ",", " ", "2"}], "}"}], 
+    ",", " ", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"\"\<Y\>\"", "\[Rule]", "\"\<C\>\""}], ",", " ", "5"}], "}"}]}],
+    "}"}]}]], "Input",
+ CellChangeTimes->{{3.7175952840581503`*^9, 
+  3.7175953149483657`*^9}},ExpressionUUID->"429ba723-abb6-46a4-bb6f-\
+2f7c1fb51ea2"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"\<\"Y\"\>", "\[Rule]", "\<\"B\"\>"}], ",", "2"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"\<\"Y\"\>", "\[Rule]", "\<\"C\"\>"}], ",", "5"}], "}"}]}], 
+  "}"}]], "Output",
+ CellChangeTimes->{
+  3.7175953164193416`*^9},ExpressionUUID->"b3036a93-08a2-40ce-8a72-\
+643bcc6446f4"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"TreePlot", "[", 
+  RowBox[{"y", ",", " ", 
+   RowBox[{"VertexLabeling", "\[Rule]", "True"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.7175953262614155`*^9, 
+  3.71759533748752*^9}},ExpressionUUID->"620c4496-f0e1-42f6-9089-\
+1554d8642cc0"],
+
+Cell[BoxData[
+ GraphicsBox[
+  TagBox[GraphicsComplexBox[{{0.4472135954999579, 0.8944271909999159}, {0., 
+    0.}, {0.8944271909999159, 0.}}, {
+     {RGBColor[0.5, 0., 0.], 
+      {Arrowheads[{{0.5, 0.5, 
+          GraphicsBox[{
+            GrayLevel[0], 
+            InsetBox[
+             BoxData[
+              FormBox[
+               StyleBox["2", StripOnInput -> False], TraditionalForm]], {0, 
+             0}, 
+             ImageScaled[{0.5, 0.5}], Automatic, None, Background -> 
+             GrayLevel[1]]}]}, {0, 0}}], ArrowBox[{1, 2}]}, 
+      {Arrowheads[{{0.5, 0.5, 
+          GraphicsBox[{
+            GrayLevel[0], 
+            InsetBox[
+             BoxData[
+              FormBox[
+               StyleBox["5", StripOnInput -> False], TraditionalForm]], {0, 
+             0}, 
+             ImageScaled[{0.5, 0.5}], Automatic, None, Background -> 
+             GrayLevel[1]]}]}, {0, 0}}], ArrowBox[{1, 3}]}}, {InsetBox[
+       FrameBox["\<\"Y\"\>",
+        Background->RGBColor[1, 1, 0.8],
+        FrameStyle->RGBColor[0.94, 0.85, 0.36],
+        StripOnInput->False], 1], InsetBox[
+       FrameBox["\<\"B\"\>",
+        Background->RGBColor[1, 1, 0.8],
+        FrameStyle->RGBColor[0.94, 0.85, 0.36],
+        StripOnInput->False], 2], InsetBox[
+       FrameBox["\<\"C\"\>",
+        Background->RGBColor[1, 1, 0.8],
+        FrameStyle->RGBColor[0.94, 0.85, 0.36],
+        StripOnInput->False], 3]}}],
+   Annotation[#, 
+    VertexCoordinateRules -> {{0.4472135954999579, 0.8944271909999159}, {0., 
+     0.}, {0.8944271909999159, 0.}}]& ],
+  AspectRatio->1.,
+  FrameTicks->None,
+  PlotRange->All,
+  PlotRangePadding->Scaled[0.1]]], "Output",
+ CellChangeTimes->{
+  3.717595338499528*^9},ExpressionUUID->"a8a78216-4ddc-4917-ae6c-\
+f36b5ea4113c"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"x", "=", " ", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"\"\<X\>\"", "\[Rule]", " ", "\"\<Y\>\""}], ",", "2"}], "}"}], 
+    ",", " ", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"\"\<X\>\"", "\[Rule]", "\"\<Z\>\""}], ",", "3"}], "}"}], ",", 
+    " ", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"\"\<Y\>\"", "\[Rule]", "\"\<B\>\""}], ",", " ", "2"}], "}"}], 
+    ",", " ", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"\"\<Y\>\"", "\[Rule]", "\"\<C\>\""}], ",", " ", "5"}], "}"}], 
+    ",", " ", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"\"\<Z\>\"", "\[Rule]", "\"\<D\>\""}], ",", " ", "8"}], "}"}], 
+    ",", " ", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"\"\<Z\>\"", "\[Rule]", "\"\<E\>\""}], ",", " ", "2"}], "}"}]}],
+    "}"}]}]], "Input",
+ CellChangeTimes->{{3.717595342756509*^9, 3.717595344076516*^9}, {
+  3.717595378506754*^9, 3.71759542085705*^9}, {3.717595469481436*^9, 
+  3.7175955292793703`*^9}, {3.7175955678705883`*^9, 3.7175955893617363`*^9}, {
+  3.717595626532045*^9, 3.7175956374620724`*^9}, {3.7175993620635595`*^9, 
+  3.717599368514606*^9}, {3.7176009392974186`*^9, 
+  3.71760093938142*^9}},ExpressionUUID->"2a0ced57-2e91-41eb-aeb4-\
+f4a28e21e148"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"\<\"X\"\>", "\[Rule]", "\<\"Y\"\>"}], ",", "2"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"\<\"X\"\>", "\[Rule]", "\<\"Z\"\>"}], ",", "3"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"\<\"Y\"\>", "\[Rule]", "\<\"B\"\>"}], ",", "2"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"\<\"Y\"\>", "\[Rule]", "\<\"C\"\>"}], ",", "5"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"\<\"Z\"\>", "\[Rule]", "\<\"D\"\>"}], ",", "8"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"\<\"Z\"\>", "\[Rule]", "\<\"E\"\>"}], ",", "2"}], "}"}]}], 
+  "}"}]], "Output",
+ CellChangeTimes->{3.717595591904806*^9, 3.7175956387481146`*^9, 
+  3.7176009438474507`*^9},ExpressionUUID->"fe35b702-13a2-4bd7-a78c-\
+751c83038e0d"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"TreePlot", "[", 
+  RowBox[{"x", ",", " ", 
+   RowBox[{"VertexLabeling", "\[Rule]", "True"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.7175954233770676`*^9, 
+  3.7175954357521524`*^9}},ExpressionUUID->"e3af6925-70e0-433c-9aae-\
+02bd984a8434"],
+
+Cell[BoxData[
+ GraphicsBox[
+  TagBox[GraphicsComplexBox[{{1.2247448713915892`, 1.6329931618554523`}, {
+    0.4082482904638631, 0.8164965809277261}, {2.041241452319315, 
+    0.8164965809277261}, {0., 0.}, {0.8164965809277261, 0.}, {
+    1.6329931618554523`, 0.}, {2.4494897427831783`, 0.}}, {
+     {RGBColor[0.5, 0., 0.], 
+      {Arrowheads[{{0.5, 0.5, 
+          GraphicsBox[{
+            GrayLevel[0], 
+            InsetBox[
+             BoxData[
+              FormBox[
+               StyleBox["2", StripOnInput -> False], TraditionalForm]], {0, 
+             0}, 
+             ImageScaled[{0.5, 0.5}], Automatic, None, Background -> 
+             GrayLevel[1]]}]}, {0, 0}}], ArrowBox[{1, 2}]}, 
+      {Arrowheads[{{0.5, 0.5, 
+          GraphicsBox[{
+            GrayLevel[0], 
+            InsetBox[
+             BoxData[
+              FormBox[
+               StyleBox["3", StripOnInput -> False], TraditionalForm]], {0, 
+             0}, 
+             ImageScaled[{0.5, 0.5}], Automatic, None, Background -> 
+             GrayLevel[1]]}]}, {0, 0}}], ArrowBox[{1, 3}]}, 
+      {Arrowheads[{{0.5, 0.5, 
+          GraphicsBox[{
+            GrayLevel[0], 
+            InsetBox[
+             BoxData[
+              FormBox[
+               StyleBox["2", StripOnInput -> False], TraditionalForm]], {0, 
+             0}, 
+             ImageScaled[{0.5, 0.5}], Automatic, None, Background -> 
+             GrayLevel[1]]}]}, {0, 0}}], ArrowBox[{2, 4}]}, 
+      {Arrowheads[{{0.5, 0.5, 
+          GraphicsBox[{
+            GrayLevel[0], 
+            InsetBox[
+             BoxData[
+              FormBox[
+               StyleBox["5", StripOnInput -> False], TraditionalForm]], {0, 
+             0}, 
+             ImageScaled[{0.5, 0.5}], Automatic, None, Background -> 
+             GrayLevel[1]]}]}, {0, 0}}], ArrowBox[{2, 5}]}, 
+      {Arrowheads[{{0.5, 0.5, 
+          GraphicsBox[{
+            GrayLevel[0], 
+            InsetBox[
+             BoxData[
+              FormBox[
+               StyleBox["8", StripOnInput -> False], TraditionalForm]], {0, 
+             0}, 
+             ImageScaled[{0.5, 0.5}], Automatic, None, Background -> 
+             GrayLevel[1]]}]}, {0, 0}}], ArrowBox[{3, 6}]}, 
+      {Arrowheads[{{0.5, 0.5, 
+          GraphicsBox[{
+            GrayLevel[0], 
+            InsetBox[
+             BoxData[
+              FormBox[
+               StyleBox["2", StripOnInput -> False], TraditionalForm]], {0, 
+             0}, 
+             ImageScaled[{0.5, 0.5}], Automatic, None, Background -> 
+             GrayLevel[1]]}]}, {0, 0}}], ArrowBox[{3, 7}]}}, {InsetBox[
+       FrameBox["\<\"X\"\>",
+        Background->RGBColor[1, 1, 0.8],
+        FrameStyle->RGBColor[0.94, 0.85, 0.36],
+        StripOnInput->False], 1], InsetBox[
+       FrameBox["\<\"Y\"\>",
+        Background->RGBColor[1, 1, 0.8],
+        FrameStyle->RGBColor[0.94, 0.85, 0.36],
+        StripOnInput->False], 2], InsetBox[
+       FrameBox["\<\"Z\"\>",
+        Background->RGBColor[1, 1, 0.8],
+        FrameStyle->RGBColor[0.94, 0.85, 0.36],
+        StripOnInput->False], 3], InsetBox[
+       FrameBox["\<\"B\"\>",
+        Background->RGBColor[1, 1, 0.8],
+        FrameStyle->RGBColor[0.94, 0.85, 0.36],
+        StripOnInput->False], 4], InsetBox[
+       FrameBox["\<\"C\"\>",
+        Background->RGBColor[1, 1, 0.8],
+        FrameStyle->RGBColor[0.94, 0.85, 0.36],
+        StripOnInput->False], 5], InsetBox[
+       FrameBox["\<\"D\"\>",
+        Background->RGBColor[1, 1, 0.8],
+        FrameStyle->RGBColor[0.94, 0.85, 0.36],
+        StripOnInput->False], 6], InsetBox[
+       FrameBox["\<\"E\"\>",
+        Background->RGBColor[1, 1, 0.8],
+        FrameStyle->RGBColor[0.94, 0.85, 0.36],
+        StripOnInput->False], 7]}}],
+   Annotation[#, 
+    VertexCoordinateRules -> {{1.2247448713915892`, 1.6329931618554523`}, {
+     0.4082482904638631, 0.8164965809277261}, {2.041241452319315, 
+     0.8164965809277261}, {0., 0.}, {0.8164965809277261, 0.}, {
+     1.6329931618554523`, 0.}, {2.4494897427831783`, 0.}}]& ],
+  AspectRatio->0.816496580927726,
+  FrameTicks->None,
+  PlotRange->All,
+  PlotRangePadding->Scaled[0.1]]], "Output",
+ CellChangeTimes->{
+  3.7175954378872194`*^9, {3.717595536927373*^9, 3.717595548462455*^9}, 
+   3.717595600220812*^9, 3.717595646125132*^9, 
+   3.7176009497854424`*^9},ExpressionUUID->"eb2e1ff2-927e-4ebc-afe6-\
+a5425354d121"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"tree", " ", "=", " ", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"\"\<X\>\"", "\[Rule]", "\"\<A\>\""}], ",", "2"}], "}"}], ",", 
+    " ", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"\"\<X\>\"", "\[Rule]", " ", "\"\<Y\>\""}], ",", "2"}], "}"}], 
+    ",", " ", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"\"\<X\>\"", "\[Rule]", "\"\<Z\>\""}], ",", "3"}], "}"}], ",", 
+    " ", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"\"\<Y\>\"", "\[Rule]", "\"\<B\>\""}], ",", " ", "2"}], "}"}], 
+    ",", " ", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"\"\<Y\>\"", "\[Rule]", "\"\<C\>\""}], ",", " ", "5"}], "}"}], 
+    ",", " ", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"\"\<Z\>\"", "\[Rule]", "\"\<D\>\""}], ",", " ", "8"}], "}"}], 
+    ",", " ", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"\"\<Z\>\"", "\[Rule]", "\"\<E\>\""}], ",", " ", "2"}], "}"}]}],
+    "}"}]}]], "Input",
+ CellChangeTimes->{{3.717601539879405*^9, 
+  3.7176015763806562`*^9}},ExpressionUUID->"2203e23d-2b20-41fc-90be-\
+7c154f452bf6"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"\<\"X\"\>", "\[Rule]", "\<\"A\"\>"}], ",", "2"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"\<\"X\"\>", "\[Rule]", "\<\"Y\"\>"}], ",", "2"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"\<\"X\"\>", "\[Rule]", "\<\"Z\"\>"}], ",", "3"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"\<\"Y\"\>", "\[Rule]", "\<\"B\"\>"}], ",", "2"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"\<\"Y\"\>", "\[Rule]", "\<\"C\"\>"}], ",", "5"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"\<\"Z\"\>", "\[Rule]", "\<\"D\"\>"}], ",", "8"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"\<\"Z\"\>", "\[Rule]", "\<\"E\"\>"}], ",", "2"}], "}"}]}], 
+  "}"}]], "Output",
+ CellChangeTimes->{
+  3.717601579835739*^9},ExpressionUUID->"d0d1eff5-a75c-40cc-b8aa-\
+a8082ccda487"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"TreePlot", "[", 
+  RowBox[{"tree", ",", " ", 
+   RowBox[{"VertexLabeling", "\[Rule]", "True"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.717601592163766*^9, 
+  3.717601603906871*^9}},ExpressionUUID->"951d3e80-21ae-46d5-b160-\
+aaa3483e29ca"],
+
+Cell[BoxData[
+ GraphicsBox[
+  TagBox[GraphicsComplexBox[{{1.1114378604524227`, 1.4819171472698969`}, {0., 
+    0.7409585736349484}, {0.7409585736349484, 0.7409585736349484}, {
+    2.2228757209048453`, 0.7409585736349484}, {0.3704792868174742, 0.}, {
+    1.1114378604524227`, 0.}, {1.852396434087371, 0.}, {2.5933550077223195`, 
+    0.}}, {
+     {RGBColor[0.5, 0., 0.], 
+      {Arrowheads[{{0.5, 0.5, 
+          GraphicsBox[{
+            GrayLevel[0], 
+            InsetBox[
+             BoxData[
+              FormBox[
+               StyleBox["2", StripOnInput -> False], TraditionalForm]], {0, 
+             0}, 
+             ImageScaled[{0.5, 0.5}], Automatic, None, Background -> 
+             GrayLevel[1]]}]}, {0, 0}}], ArrowBox[{1, 2}]}, 
+      {Arrowheads[{{0.5, 0.5, 
+          GraphicsBox[{
+            GrayLevel[0], 
+            InsetBox[
+             BoxData[
+              FormBox[
+               StyleBox["2", StripOnInput -> False], TraditionalForm]], {0, 
+             0}, 
+             ImageScaled[{0.5, 0.5}], Automatic, None, Background -> 
+             GrayLevel[1]]}]}, {0, 0}}], ArrowBox[{1, 3}]}, 
+      {Arrowheads[{{0.5, 0.5, 
+          GraphicsBox[{
+            GrayLevel[0], 
+            InsetBox[
+             BoxData[
+              FormBox[
+               StyleBox["3", StripOnInput -> False], TraditionalForm]], {0, 
+             0}, 
+             ImageScaled[{0.5, 0.5}], Automatic, None, Background -> 
+             GrayLevel[1]]}]}, {0, 0}}], ArrowBox[{1, 4}]}, 
+      {Arrowheads[{{0.5, 0.5, 
+          GraphicsBox[{
+            GrayLevel[0], 
+            InsetBox[
+             BoxData[
+              FormBox[
+               StyleBox["2", StripOnInput -> False], TraditionalForm]], {0, 
+             0}, 
+             ImageScaled[{0.5, 0.5}], Automatic, None, Background -> 
+             GrayLevel[1]]}]}, {0, 0}}], ArrowBox[{3, 5}]}, 
+      {Arrowheads[{{0.5, 0.5, 
+          GraphicsBox[{
+            GrayLevel[0], 
+            InsetBox[
+             BoxData[
+              FormBox[
+               StyleBox["5", StripOnInput -> False], TraditionalForm]], {0, 
+             0}, 
+             ImageScaled[{0.5, 0.5}], Automatic, None, Background -> 
+             GrayLevel[1]]}]}, {0, 0}}], ArrowBox[{3, 6}]}, 
+      {Arrowheads[{{0.5, 0.5, 
+          GraphicsBox[{
+            GrayLevel[0], 
+            InsetBox[
+             BoxData[
+              FormBox[
+               StyleBox["8", StripOnInput -> False], TraditionalForm]], {0, 
+             0}, 
+             ImageScaled[{0.5, 0.5}], Automatic, None, Background -> 
+             GrayLevel[1]]}]}, {0, 0}}], ArrowBox[{4, 7}]}, 
+      {Arrowheads[{{0.5, 0.5, 
+          GraphicsBox[{
+            GrayLevel[0], 
+            InsetBox[
+             BoxData[
+              FormBox[
+               StyleBox["2", StripOnInput -> False], TraditionalForm]], {0, 
+             0}, 
+             ImageScaled[{0.5, 0.5}], Automatic, None, Background -> 
+             GrayLevel[1]]}]}, {0, 0}}], ArrowBox[{4, 8}]}}, {InsetBox[
+       FrameBox["\<\"X\"\>",
+        Background->RGBColor[1, 1, 0.8],
+        FrameStyle->RGBColor[0.94, 0.85, 0.36],
+        StripOnInput->False], 1], InsetBox[
+       FrameBox["\<\"A\"\>",
+        Background->RGBColor[1, 1, 0.8],
+        FrameStyle->RGBColor[0.94, 0.85, 0.36],
+        StripOnInput->False], 2], InsetBox[
+       FrameBox["\<\"Y\"\>",
+        Background->RGBColor[1, 1, 0.8],
+        FrameStyle->RGBColor[0.94, 0.85, 0.36],
+        StripOnInput->False], 3], InsetBox[
+       FrameBox["\<\"Z\"\>",
+        Background->RGBColor[1, 1, 0.8],
+        FrameStyle->RGBColor[0.94, 0.85, 0.36],
+        StripOnInput->False], 4], InsetBox[
+       FrameBox["\<\"B\"\>",
+        Background->RGBColor[1, 1, 0.8],
+        FrameStyle->RGBColor[0.94, 0.85, 0.36],
+        StripOnInput->False], 5], InsetBox[
+       FrameBox["\<\"C\"\>",
+        Background->RGBColor[1, 1, 0.8],
+        FrameStyle->RGBColor[0.94, 0.85, 0.36],
+        StripOnInput->False], 6], InsetBox[
+       FrameBox["\<\"D\"\>",
+        Background->RGBColor[1, 1, 0.8],
+        FrameStyle->RGBColor[0.94, 0.85, 0.36],
+        StripOnInput->False], 7], InsetBox[
+       FrameBox["\<\"E\"\>",
+        Background->RGBColor[1, 1, 0.8],
+        FrameStyle->RGBColor[0.94, 0.85, 0.36],
+        StripOnInput->False], 8]}}],
+   Annotation[#, 
+    VertexCoordinateRules -> {{1.1114378604524227`, 1.4819171472698969`}, {0.,
+      0.7409585736349484}, {0.7409585736349484, 0.7409585736349484}, {
+     2.2228757209048453`, 0.7409585736349484}, {0.3704792868174742, 0.}, {
+     1.1114378604524227`, 0.}, {1.852396434087371, 0.}, {2.5933550077223195`, 
+     0.}}]& ],
+  AspectRatio->0.7559289460184544,
+  FrameTicks->None,
+  PlotRange->All,
+  PlotRangePadding->Scaled[0.1]]], "Output",
+ CellChangeTimes->{
+  3.71760160543886*^9},ExpressionUUID->"e297d28c-2d0f-4b2c-878e-178e68543090"]
+}, Open  ]]
+},
+WindowSize->{1264, 661},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+FrontEndVersion->"11.1 for Microsoft Windows (64-bit) (April 18, 2017)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 599, 16, 50, "Input", "ExpressionUUID" -> \
+"039f3789-8b75-4fcd-a5c8-ba3e24774d8a"],
+Cell[1182, 40, 420, 12, 30, "Output", "ExpressionUUID" -> \
+"5cf2514b-6c6e-40a3-8530-d10db9773540"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[1639, 57, 285, 7, 30, "Input", "ExpressionUUID" -> \
+"79c54792-e9aa-4306-b3a5-e9206646b308"],
+Cell[1927, 66, 1799, 46, 375, "Output", "ExpressionUUID" -> \
+"e709f9f7-916c-4220-8f85-cc3a129149da"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[3763, 117, 460, 14, 30, "Input", "ExpressionUUID" -> \
+"429ba723-abb6-46a4-bb6f-2f7c1fb51ea2"],
+Cell[4226, 133, 374, 12, 30, "Output", "ExpressionUUID" -> \
+"b3036a93-08a2-40ce-8a72-643bcc6446f4"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[4637, 150, 262, 6, 30, "Input", "ExpressionUUID" -> \
+"620c4496-f0e1-42f6-9089-1554d8642cc0"],
+Cell[4902, 158, 1753, 46, 375, "Output", "ExpressionUUID" -> \
+"a8a78216-4ddc-4917-ae6c-f36b5ea4113c"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[6692, 209, 1244, 34, 30, "Input", "ExpressionUUID" -> \
+"2a0ced57-2e91-41eb-aeb4-f4a28e21e148"],
+Cell[7939, 245, 848, 24, 30, "Output", "ExpressionUUID" -> \
+"fe35b702-13a2-4bd7-a78c-751c83038e0d"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[8824, 274, 265, 6, 30, "Input", "ExpressionUUID" -> \
+"e3af6925-70e0-433c-9aae-02bd984a8434"],
+Cell[9092, 282, 4340, 108, 309, "Output", "ExpressionUUID" -> \
+"eb2e1ff2-927e-4ebc-afe6-a5425354d121"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[13469, 395, 1076, 34, 30, "Input", "ExpressionUUID" -> \
+"2203e23d-2b20-41fc-90be-7c154f452bf6"],
+Cell[14548, 431, 907, 27, 30, "Output", "ExpressionUUID" -> \
+"d0d1eff5-a75c-40cc-b8aa-a8082ccda487"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[15492, 463, 264, 6, 30, "Input", "ExpressionUUID" -> \
+"951d3e80-21ae-46d5-b160-aaa3483e29ca"],
+Cell[15759, 471, 4848, 121, 320, "Output", "ExpressionUUID" -> \
+"e297d28c-2d0f-4b2c-878e-178e68543090"]
+}, Open  ]]
+}
+]
+*)
+

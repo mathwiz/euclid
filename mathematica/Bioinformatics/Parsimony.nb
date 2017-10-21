@@ -1,0 +1,445 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.1' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     18972,        437]
+NotebookOptionsPosition[     17480,        393]
+NotebookOutlinePosition[     17824,        408]
+CellTagsIndexPosition[     17781,        405]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[{
+ RowBox[{"pars", " ", "=", " ", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"\"\<11:GAAA\>\"", "\[Rule]", "\"\<7:GCAA\>\""}], ",", " ", 
+    RowBox[{"\"\<7:GCAA\>\"", "\[Rule]", "\"\<1:TCAA\>\""}], ",", " ", 
+    RowBox[{"\"\<7:GCAA\>\"", "\[Rule]", "\"\<2:GCAT\>\""}], ",", " ", 
+    RowBox[{"\"\<11:GAAA\>\"", "\[Rule]", "\"\<10:GAAA\>\""}], ",", " ", 
+    RowBox[{"\"\<10:GAAA\>\"", "\[Rule]", "\"\<3:TTTT\>\""}], ",", " ", 
+    RowBox[{"\"\<10:GAAA\>\"", "\[Rule]", "\"\<9:GAAA\>\""}], ",", " ", 
+    RowBox[{"\"\<9:GAAA\>\"", "\[Rule]", "\"\<4:GATA\>\""}], ",", " ", 
+    RowBox[{"\"\<9:GAAA\>\"", "\[Rule]", "\"\<8:GAAC\>\""}], ",", " ", 
+    RowBox[{"\"\<8:GAAC\>\"", "\[Rule]", "\"\<5:ATAG\>\""}], ",", " ", 
+    RowBox[{"\"\<8:GAAC\>\"", "\[Rule]", "\"\<6:GAAC\>\""}]}], 
+   "}"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"TreePlot", "[", 
+   RowBox[{"pars", ",", " ", "Left", ",", " ", "\"\<11:GAAA\>\"", ",", " ", 
+    RowBox[{"VertexLabeling", "\[Rule]", "True"}]}], "]"}], " "}]}], "Input",
+ CellChangeTimes->{{3.7175906618765574`*^9, 3.71759068434034*^9}, {
+  3.7175907494477873`*^9, 3.7175907767640276`*^9}, {3.7175908123832245`*^9, 
+  3.717590885348729*^9}, {3.7175910041755543`*^9, 3.717591388993026*^9}, {
+  3.7175914277072926`*^9, 3.717591481552667*^9}, {3.717591732648226*^9, 
+  3.717591734514287*^9}, {3.717591856015133*^9, 3.717591857594142*^9}, {
+  3.7175919902839613`*^9, 
+  3.7175920004119816`*^9}},ExpressionUUID->"3f4127b7-067f-4512-979c-\
+b0bbe0e8a4a5"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"\<\"11:GAAA\"\>", "\[Rule]", "\<\"7:GCAA\"\>"}], ",", 
+   RowBox[{"\<\"7:GCAA\"\>", "\[Rule]", "\<\"1:TCAA\"\>"}], ",", 
+   RowBox[{"\<\"7:GCAA\"\>", "\[Rule]", "\<\"2:GCAT\"\>"}], ",", 
+   RowBox[{"\<\"11:GAAA\"\>", "\[Rule]", "\<\"10:GAAA\"\>"}], ",", 
+   RowBox[{"\<\"10:GAAA\"\>", "\[Rule]", "\<\"3:TTTT\"\>"}], ",", 
+   RowBox[{"\<\"10:GAAA\"\>", "\[Rule]", "\<\"9:GAAA\"\>"}], ",", 
+   RowBox[{"\<\"9:GAAA\"\>", "\[Rule]", "\<\"4:GATA\"\>"}], ",", 
+   RowBox[{"\<\"9:GAAA\"\>", "\[Rule]", "\<\"8:GAAC\"\>"}], ",", 
+   RowBox[{"\<\"8:GAAC\"\>", "\[Rule]", "\<\"5:ATAG\"\>"}], ",", 
+   RowBox[{"\<\"8:GAAC\"\>", "\[Rule]", "\<\"6:GAAC\"\>"}]}], "}"}]], "Output",
+ CellChangeTimes->{
+  3.7175914884536653`*^9, 3.71759174007928*^9, 3.717591860216112*^9, {
+   3.7175920063380218`*^9, 
+   3.7175920747515297`*^9}},ExpressionUUID->"8e5e2bb6-aa00-422c-a9e2-\
+10fc41a9725d"],
+
+Cell[BoxData[
+ GraphicsBox[
+  TagBox[GraphicsComplexBox[{{0., 1.2677313820927731`}, {0.8451542547285175, 
+    0.4225771273642574}, {1.6903085094570345`, 0.}, {1.6903085094570336`, 
+    0.8451542547285167}, {0.8451542547285157, 2.1128856368212903`}, {
+    1.6903085094570327`, 1.6903085094570334`}, {1.6903085094570318`, 
+    2.53546276418555}, {2.535462764185549, 2.1128856368212925`}, {
+    2.535462764185548, 2.958039891549809}, {3.380617018914065, 
+    2.5354627641855516`}, {3.380617018914064, 3.3806170189140685`}}, {
+     {RGBColor[0.5, 0., 0.], 
+      LineBox[{{1, 2}, {1, 5}, {2, 3}, {2, 4}, {5, 6}, {5, 7}, {7, 8}, {7, 
+       9}, {9, 10}, {9, 11}}]}, {InsetBox[
+       FrameBox["\<\"11:GAAA\"\>",
+        Background->RGBColor[1, 1, 0.8],
+        FrameStyle->RGBColor[0.94, 0.85, 0.36],
+        StripOnInput->False], 1], InsetBox[
+       FrameBox["\<\"7:GCAA\"\>",
+        Background->RGBColor[1, 1, 0.8],
+        FrameStyle->RGBColor[0.94, 0.85, 0.36],
+        StripOnInput->False], 2], InsetBox[
+       FrameBox["\<\"1:TCAA\"\>",
+        Background->RGBColor[1, 1, 0.8],
+        FrameStyle->RGBColor[0.94, 0.85, 0.36],
+        StripOnInput->False], 3], InsetBox[
+       FrameBox["\<\"2:GCAT\"\>",
+        Background->RGBColor[1, 1, 0.8],
+        FrameStyle->RGBColor[0.94, 0.85, 0.36],
+        StripOnInput->False], 4], InsetBox[
+       FrameBox["\<\"10:GAAA\"\>",
+        Background->RGBColor[1, 1, 0.8],
+        FrameStyle->RGBColor[0.94, 0.85, 0.36],
+        StripOnInput->False], 5], InsetBox[
+       FrameBox["\<\"3:TTTT\"\>",
+        Background->RGBColor[1, 1, 0.8],
+        FrameStyle->RGBColor[0.94, 0.85, 0.36],
+        StripOnInput->False], 6], InsetBox[
+       FrameBox["\<\"9:GAAA\"\>",
+        Background->RGBColor[1, 1, 0.8],
+        FrameStyle->RGBColor[0.94, 0.85, 0.36],
+        StripOnInput->False], 7], InsetBox[
+       FrameBox["\<\"4:GATA\"\>",
+        Background->RGBColor[1, 1, 0.8],
+        FrameStyle->RGBColor[0.94, 0.85, 0.36],
+        StripOnInput->False], 8], InsetBox[
+       FrameBox["\<\"8:GAAC\"\>",
+        Background->RGBColor[1, 1, 0.8],
+        FrameStyle->RGBColor[0.94, 0.85, 0.36],
+        StripOnInput->False], 9], InsetBox[
+       FrameBox["\<\"5:ATAG\"\>",
+        Background->RGBColor[1, 1, 0.8],
+        FrameStyle->RGBColor[0.94, 0.85, 0.36],
+        StripOnInput->False], 10], InsetBox[
+       FrameBox["\<\"6:GAAC\"\>",
+        Background->RGBColor[1, 1, 0.8],
+        FrameStyle->RGBColor[0.94, 0.85, 0.36],
+        StripOnInput->False], 11]}}],
+   Annotation[#, 
+    VertexCoordinateRules -> {{0., 1.2677313820927731`}, {0.8451542547285175, 
+     0.4225771273642574}, {1.6903085094570345`, 0.}, {1.6903085094570336`, 
+     0.8451542547285167}, {0.8451542547285157, 2.1128856368212903`}, {
+     1.6903085094570327`, 1.6903085094570334`}, {1.6903085094570318`, 
+     2.53546276418555}, {2.535462764185549, 2.1128856368212925`}, {
+     2.535462764185548, 2.958039891549809}, {3.380617018914065, 
+     2.5354627641855516`}, {3.380617018914064, 3.3806170189140685`}}]& ],
+  AspectRatio->1.0000000000000004`,
+  FrameTicks->None,
+  PlotRange->All,
+  PlotRangePadding->Scaled[0.1]]], "Output",
+ CellChangeTimes->{
+  3.7175914884536653`*^9, 3.71759174007928*^9, 3.717591860216112*^9, {
+   3.7175920063380218`*^9, 
+   3.7175920747614956`*^9}},ExpressionUUID->"246e07dc-7e51-4bb9-945b-\
+5031ef9612eb"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"pars2", " ", "=", " ", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"\"\<11:TCAT\>\"", "\[Rule]", "\"\<7:TCAT\>\""}], ",", " ", 
+     RowBox[{"\"\<7:TCAT\>\"", "\[Rule]", "\"\<1:TCAA\>\""}], ",", " ", 
+     RowBox[{"\"\<7:TCAT\>\"", "\[Rule]", "\"\<2:GCAT\>\""}], ",", " ", 
+     RowBox[{"\"\<11:TCAT\>\"", "\[Rule]", "\"\<10:TAAT\>\""}], ",", " ", 
+     RowBox[{"\"\<10:TAAT\>\"", "\[Rule]", "\"\<3:TTTT\>\""}], ",", " ", 
+     RowBox[{"\"\<10:TAAT\>\"", "\[Rule]", "\"\<9:GAAA\>\""}], ",", " ", 
+     RowBox[{"\"\<9:GAAA\>\"", "\[Rule]", "\"\<4:GATA\>\""}], ",", " ", 
+     RowBox[{"\"\<9:GAAA\>\"", "\[Rule]", "\"\<8:GAAC\>\""}], ",", " ", 
+     RowBox[{"\"\<8:GAAC\>\"", "\[Rule]", "\"\<5:ATAG\>\""}], ",", " ", 
+     RowBox[{"\"\<8:GAAC\>\"", "\[Rule]", "\"\<6:GAAC\>\""}]}], "}"}]}], 
+  "\[IndentingNewLine]"}]], "Input",
+ CellChangeTimes->{
+  3.71759224837157*^9, {3.71759228594588*^9, 
+   3.717592359185336*^9}},ExpressionUUID->"131ed07e-a876-4026-bf11-\
+280d853474fe"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"\<\"11:TCAT\"\>", "\[Rule]", "\<\"7:TCAT\"\>"}], ",", 
+   RowBox[{"\<\"7:TCAT\"\>", "\[Rule]", "\<\"1:TCAA\"\>"}], ",", 
+   RowBox[{"\<\"7:TCAT\"\>", "\[Rule]", "\<\"2:GCAT\"\>"}], ",", 
+   RowBox[{"\<\"11:TCAT\"\>", "\[Rule]", "\<\"10:TAAT\"\>"}], ",", 
+   RowBox[{"\<\"10:TAAT\"\>", "\[Rule]", "\<\"3:TTTT\"\>"}], ",", 
+   RowBox[{"\<\"10:TAAT\"\>", "\[Rule]", "\<\"9:GAAA\"\>"}], ",", 
+   RowBox[{"\<\"9:GAAA\"\>", "\[Rule]", "\<\"4:GATA\"\>"}], ",", 
+   RowBox[{"\<\"9:GAAA\"\>", "\[Rule]", "\<\"8:GAAC\"\>"}], ",", 
+   RowBox[{"\<\"8:GAAC\"\>", "\[Rule]", "\<\"5:ATAG\"\>"}], ",", 
+   RowBox[{"\<\"8:GAAC\"\>", "\[Rule]", "\<\"6:GAAC\"\>"}]}], "}"}]], "Output",
+ CellChangeTimes->{
+  3.7175923930755324`*^9},ExpressionUUID->"e3a63ad3-d2b4-4cd7-b4bb-\
+301f2943e730"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"TreePlot", "[", 
+   RowBox[{"pars2", ",", " ", "Left", ",", " ", "\"\<11:TCAT\>\"", ",", " ", 
+    RowBox[{"VertexLabeling", "\[Rule]", "True"}]}], "]"}], " "}]], "Input",
+ CellChangeTimes->{{3.7175924145746536`*^9, 
+  3.7175924385468464`*^9}},ExpressionUUID->"ea663b55-8b13-4212-9279-\
+aed1bc66bf57"],
+
+Cell[BoxData[
+ GraphicsBox[
+  TagBox[GraphicsComplexBox[{{0., 1.2677313820927731`}, {0.8451542547285175, 
+    0.4225771273642574}, {1.6903085094570345`, 0.}, {1.6903085094570336`, 
+    0.8451542547285167}, {0.8451542547285157, 2.1128856368212903`}, {
+    1.6903085094570327`, 1.6903085094570334`}, {1.6903085094570318`, 
+    2.53546276418555}, {2.535462764185549, 2.1128856368212925`}, {
+    2.535462764185548, 2.958039891549809}, {3.380617018914065, 
+    2.5354627641855516`}, {3.380617018914064, 3.3806170189140685`}}, {
+     {RGBColor[0.5, 0., 0.], 
+      LineBox[{{1, 2}, {1, 5}, {2, 3}, {2, 4}, {5, 6}, {5, 7}, {7, 8}, {7, 
+       9}, {9, 10}, {9, 11}}]}, {InsetBox[
+       FrameBox["\<\"11:TCAT\"\>",
+        Background->RGBColor[1, 1, 0.8],
+        FrameStyle->RGBColor[0.94, 0.85, 0.36],
+        StripOnInput->False], 1], InsetBox[
+       FrameBox["\<\"7:TCAT\"\>",
+        Background->RGBColor[1, 1, 0.8],
+        FrameStyle->RGBColor[0.94, 0.85, 0.36],
+        StripOnInput->False], 2], InsetBox[
+       FrameBox["\<\"1:TCAA\"\>",
+        Background->RGBColor[1, 1, 0.8],
+        FrameStyle->RGBColor[0.94, 0.85, 0.36],
+        StripOnInput->False], 3], InsetBox[
+       FrameBox["\<\"2:GCAT\"\>",
+        Background->RGBColor[1, 1, 0.8],
+        FrameStyle->RGBColor[0.94, 0.85, 0.36],
+        StripOnInput->False], 4], InsetBox[
+       FrameBox["\<\"10:TAAT\"\>",
+        Background->RGBColor[1, 1, 0.8],
+        FrameStyle->RGBColor[0.94, 0.85, 0.36],
+        StripOnInput->False], 5], InsetBox[
+       FrameBox["\<\"3:TTTT\"\>",
+        Background->RGBColor[1, 1, 0.8],
+        FrameStyle->RGBColor[0.94, 0.85, 0.36],
+        StripOnInput->False], 6], InsetBox[
+       FrameBox["\<\"9:GAAA\"\>",
+        Background->RGBColor[1, 1, 0.8],
+        FrameStyle->RGBColor[0.94, 0.85, 0.36],
+        StripOnInput->False], 7], InsetBox[
+       FrameBox["\<\"4:GATA\"\>",
+        Background->RGBColor[1, 1, 0.8],
+        FrameStyle->RGBColor[0.94, 0.85, 0.36],
+        StripOnInput->False], 8], InsetBox[
+       FrameBox["\<\"8:GAAC\"\>",
+        Background->RGBColor[1, 1, 0.8],
+        FrameStyle->RGBColor[0.94, 0.85, 0.36],
+        StripOnInput->False], 9], InsetBox[
+       FrameBox["\<\"5:ATAG\"\>",
+        Background->RGBColor[1, 1, 0.8],
+        FrameStyle->RGBColor[0.94, 0.85, 0.36],
+        StripOnInput->False], 10], InsetBox[
+       FrameBox["\<\"6:GAAC\"\>",
+        Background->RGBColor[1, 1, 0.8],
+        FrameStyle->RGBColor[0.94, 0.85, 0.36],
+        StripOnInput->False], 11]}}],
+   Annotation[#, 
+    VertexCoordinateRules -> {{0., 1.2677313820927731`}, {0.8451542547285175, 
+     0.4225771273642574}, {1.6903085094570345`, 0.}, {1.6903085094570336`, 
+     0.8451542547285167}, {0.8451542547285157, 2.1128856368212903`}, {
+     1.6903085094570327`, 1.6903085094570334`}, {1.6903085094570318`, 
+     2.53546276418555}, {2.535462764185549, 2.1128856368212925`}, {
+     2.535462764185548, 2.958039891549809}, {3.380617018914065, 
+     2.5354627641855516`}, {3.380617018914064, 3.3806170189140685`}}]& ],
+  AspectRatio->1.0000000000000004`,
+  FrameTicks->None,
+  PlotRange->All,
+  PlotRangePadding->Scaled[0.1]]], "Output",
+ CellChangeTimes->{{3.7175924229366894`*^9, 
+  3.717592444418836*^9}},ExpressionUUID->"8900c62d-6b03-4686-8d89-\
+d42b416d406a"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"pars3", " ", "=", " ", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"\"\<11:GAAT\>\"", "\[Rule]", "\"\<7:GCAT\>\""}], ",", " ", 
+    RowBox[{"\"\<7:GCAT\>\"", "\[Rule]", "\"\<1:TCAA\>\""}], ",", " ", 
+    RowBox[{"\"\<7:GCAT\>\"", "\[Rule]", "\"\<2:GCAT\>\""}], ",", " ", 
+    RowBox[{"\"\<11:GAAT\>\"", "\[Rule]", "\"\<10:GAAT\>\""}], ",", " ", 
+    RowBox[{"\"\<10:GAAT\>\"", "\[Rule]", "\"\<3:TTTT\>\""}], ",", " ", 
+    RowBox[{"\"\<10:GAAT\>\"", "\[Rule]", "\"\<9:GAAC\>\""}], ",", " ", 
+    RowBox[{"\"\<9:GAAC\>\"", "\[Rule]", "\"\<4:GATA\>\""}], ",", " ", 
+    RowBox[{"\"\<9:GAAC\>\"", "\[Rule]", "\"\<8:GAAC\>\""}], ",", " ", 
+    RowBox[{"\"\<8:GAAC\>\"", "\[Rule]", "\"\<5:ATAG\>\""}], ",", " ", 
+    RowBox[{"\"\<8:GAAC\>\"", "\[Rule]", "\"\<6:GAAC\>\""}]}], 
+   "}"}]}]], "Input",
+ CellChangeTimes->{{3.7175932640566673`*^9, 3.717593264161718*^9}, {
+  3.717593317470089*^9, 3.7175933863284807`*^9}, {3.7175934384598694`*^9, 
+  3.7175934505199003`*^9}},ExpressionUUID->"69e624a1-0600-4039-bf2d-\
+3f1d5828a1c8"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"\<\"11:GAAT\"\>", "\[Rule]", "\<\"7:GCAT\"\>"}], ",", 
+   RowBox[{"\<\"7:GCAT\"\>", "\[Rule]", "\<\"1:TCAA\"\>"}], ",", 
+   RowBox[{"\<\"7:GCAT\"\>", "\[Rule]", "\<\"2:GCAT\"\>"}], ",", 
+   RowBox[{"\<\"11:GAAT\"\>", "\[Rule]", "\<\"10:GAAT\"\>"}], ",", 
+   RowBox[{"\<\"10:GAAT\"\>", "\[Rule]", "\<\"3:TTTT\"\>"}], ",", 
+   RowBox[{"\<\"10:GAAT\"\>", "\[Rule]", "\<\"9:GAAC\"\>"}], ",", 
+   RowBox[{"\<\"9:GAAC\"\>", "\[Rule]", "\<\"4:GATA\"\>"}], ",", 
+   RowBox[{"\<\"9:GAAC\"\>", "\[Rule]", "\<\"8:GAAC\"\>"}], ",", 
+   RowBox[{"\<\"8:GAAC\"\>", "\[Rule]", "\<\"5:ATAG\"\>"}], ",", 
+   RowBox[{"\<\"8:GAAC\"\>", "\[Rule]", "\<\"6:GAAC\"\>"}]}], "}"}]], "Output",
+ CellChangeTimes->{
+  3.7175934795791206`*^9},ExpressionUUID->"fbbdef8c-9868-40e9-8c62-\
+366722fb339b"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"TreePlot", "[", 
+  RowBox[{"pars3", ",", " ", "Left", ",", " ", "\"\<11:GAAT\>\"", ",", " ", 
+   RowBox[{"VertexLabeling", "\[Rule]", "True"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.7175935138693895`*^9, 3.7175935139463916`*^9}, {
+  3.717593606649476*^9, 
+  3.7175936099554996`*^9}},ExpressionUUID->"dd49c9fa-d64a-4825-9847-\
+d1bd58769707"],
+
+Cell[BoxData[
+ GraphicsBox[
+  TagBox[GraphicsComplexBox[{{0., 1.2677313820927731`}, {0.8451542547285175, 
+    0.4225771273642574}, {1.6903085094570345`, 0.}, {1.6903085094570336`, 
+    0.8451542547285167}, {0.8451542547285157, 2.1128856368212903`}, {
+    1.6903085094570327`, 1.6903085094570334`}, {1.6903085094570318`, 
+    2.53546276418555}, {2.535462764185549, 2.1128856368212925`}, {
+    2.535462764185548, 2.958039891549809}, {3.380617018914065, 
+    2.5354627641855516`}, {3.380617018914064, 3.3806170189140685`}}, {
+     {RGBColor[0.5, 0., 0.], 
+      LineBox[{{1, 2}, {1, 5}, {2, 3}, {2, 4}, {5, 6}, {5, 7}, {7, 8}, {7, 
+       9}, {9, 10}, {9, 11}}]}, {InsetBox[
+       FrameBox["\<\"11:GAAT\"\>",
+        Background->RGBColor[1, 1, 0.8],
+        FrameStyle->RGBColor[0.94, 0.85, 0.36],
+        StripOnInput->False], 1], InsetBox[
+       FrameBox["\<\"7:GCAT\"\>",
+        Background->RGBColor[1, 1, 0.8],
+        FrameStyle->RGBColor[0.94, 0.85, 0.36],
+        StripOnInput->False], 2], InsetBox[
+       FrameBox["\<\"1:TCAA\"\>",
+        Background->RGBColor[1, 1, 0.8],
+        FrameStyle->RGBColor[0.94, 0.85, 0.36],
+        StripOnInput->False], 3], InsetBox[
+       FrameBox["\<\"2:GCAT\"\>",
+        Background->RGBColor[1, 1, 0.8],
+        FrameStyle->RGBColor[0.94, 0.85, 0.36],
+        StripOnInput->False], 4], InsetBox[
+       FrameBox["\<\"10:GAAT\"\>",
+        Background->RGBColor[1, 1, 0.8],
+        FrameStyle->RGBColor[0.94, 0.85, 0.36],
+        StripOnInput->False], 5], InsetBox[
+       FrameBox["\<\"3:TTTT\"\>",
+        Background->RGBColor[1, 1, 0.8],
+        FrameStyle->RGBColor[0.94, 0.85, 0.36],
+        StripOnInput->False], 6], InsetBox[
+       FrameBox["\<\"9:GAAC\"\>",
+        Background->RGBColor[1, 1, 0.8],
+        FrameStyle->RGBColor[0.94, 0.85, 0.36],
+        StripOnInput->False], 7], InsetBox[
+       FrameBox["\<\"4:GATA\"\>",
+        Background->RGBColor[1, 1, 0.8],
+        FrameStyle->RGBColor[0.94, 0.85, 0.36],
+        StripOnInput->False], 8], InsetBox[
+       FrameBox["\<\"8:GAAC\"\>",
+        Background->RGBColor[1, 1, 0.8],
+        FrameStyle->RGBColor[0.94, 0.85, 0.36],
+        StripOnInput->False], 9], InsetBox[
+       FrameBox["\<\"5:ATAG\"\>",
+        Background->RGBColor[1, 1, 0.8],
+        FrameStyle->RGBColor[0.94, 0.85, 0.36],
+        StripOnInput->False], 10], InsetBox[
+       FrameBox["\<\"6:GAAC\"\>",
+        Background->RGBColor[1, 1, 0.8],
+        FrameStyle->RGBColor[0.94, 0.85, 0.36],
+        StripOnInput->False], 11]}}],
+   Annotation[#, 
+    VertexCoordinateRules -> {{0., 1.2677313820927731`}, {0.8451542547285175, 
+     0.4225771273642574}, {1.6903085094570345`, 0.}, {1.6903085094570336`, 
+     0.8451542547285167}, {0.8451542547285157, 2.1128856368212903`}, {
+     1.6903085094570327`, 1.6903085094570334`}, {1.6903085094570318`, 
+     2.53546276418555}, {2.535462764185549, 2.1128856368212925`}, {
+     2.535462764185548, 2.958039891549809}, {3.380617018914065, 
+     2.5354627641855516`}, {3.380617018914064, 3.3806170189140685`}}]& ],
+  AspectRatio->1.0000000000000004`,
+  FrameTicks->None,
+  PlotRange->All,
+  PlotRangePadding->Scaled[0.1]]], "Output",
+ CellChangeTimes->{3.717593515313371*^9, 
+  3.717593612104464*^9},ExpressionUUID->"1c7a2815-81a3-41bc-9342-\
+b1a6965f8d04"]
+}, Open  ]]
+},
+WindowSize->{1280, 677},
+WindowMargins->{{-8, Automatic}, {Automatic, -8}},
+FrontEndVersion->"11.1 for Microsoft Windows (64-bit) (April 18, 2017)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 1499, 26, 69, "Input", "ExpressionUUID" -> \
+"3f4127b7-067f-4512-979c-b0bbe0e8a4a5"],
+Cell[2082, 50, 923, 17, 50, "Output", "ExpressionUUID" -> \
+"8e5e2bb6-aa00-422c-a9e2-10fc41a9725d"],
+Cell[3008, 69, 3351, 72, 375, "Output", "ExpressionUUID" -> \
+"246e07dc-7e51-4bb9-945b-5031ef9612eb"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[6396, 146, 1011, 19, 69, "Input", "ExpressionUUID" -> \
+"131ed07e-a876-4026-bf11-280d853474fe"],
+Cell[7410, 167, 822, 15, 50, "Output", "ExpressionUUID" -> \
+"e3a63ad3-d2b4-4cd7-b4bb-301f2943e730"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[8269, 187, 336, 7, 30, "Input", "ExpressionUUID" -> \
+"ea663b55-8b13-4212-9279-aed1bc66bf57"],
+Cell[8608, 196, 3274, 70, 375, "Output", "ExpressionUUID" -> \
+"8900c62d-6b03-4686-8d89-d42b416d406a"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[11919, 271, 1043, 18, 50, "Input", "ExpressionUUID" -> \
+"69e624a1-0600-4039-bf2d-3f1d5828a1c8"],
+Cell[12965, 291, 822, 15, 30, "Output", "ExpressionUUID" -> \
+"fbbdef8c-9868-40e9-8c62-366722fb339b"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[13824, 311, 367, 7, 30, "Input", "ExpressionUUID" -> \
+"dd49c9fa-d64a-4825-9847-d1bd58769707"],
+Cell[14194, 320, 3270, 70, 408, "Output", "ExpressionUUID" -> \
+"1c7a2815-81a3-41bc-9342-b1a6965f8d04"]
+}, Open  ]]
+}
+]
+*)
+
