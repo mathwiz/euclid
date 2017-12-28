@@ -1,0 +1,15 @@
+#lang racket
+(define (sqrt2)
+  (local (
+          (define (next x)
+            (+ (/ 1 x) (/ x 2)))
+          (define (close? x1 x2) 
+            (< (abs (- x1 x2)) .000001))
+          (define (iter x)
+            (cond ((close? x (next x)) (exact->inexact x))
+                  (else (iter (next x))))
+            )
+          )
+    (iter 2)
+    )
+  )
