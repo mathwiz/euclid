@@ -10,16 +10,23 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[      1470,         56]
-NotebookOptionsPosition[      1034,         38]
-NotebookOutlinePosition[      1381,         53]
-CellTagsIndexPosition[      1338,         50]
+NotebookDataLength[      1800,         68]
+NotebookOptionsPosition[      1232,         46]
+NotebookOutlinePosition[      1578,         61]
+CellTagsIndexPosition[      1535,         58]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
 Notebook[{
 
 Cell[CellGroupData[{
+Cell["Spivak Chapter 1", "Title",
+ CellChangeTimes->{{3.7564630038076715`*^9, 
+  3.756463011934857*^9}},ExpressionUUID->"63b93e65-c0b3-48e7-9861-\
+d46e753c102c"],
+
+Cell[CellGroupData[{
+
 Cell[BoxData[
  RowBox[{"Limit", "[", 
   RowBox[{
@@ -35,9 +42,10 @@ Cell[BoxData["0"], "Output",
   3.745614429642418*^9},ExpressionUUID->"33d38400-c6ca-4be7-bbc6-\
 d3dd2a6e1b07"]
 }, Open  ]]
+}, Open  ]]
 },
 WindowSize->{789, 622},
-WindowMargins->{{Automatic, -1591}, {-42, Automatic}},
+WindowMargins->{{Automatic, -1472}, {-5, Automatic}},
 FrontEndVersion->"11.1 for Microsoft Windows (64-bit) (April 18, 2017)",
 StyleDefinitions->"Default.nb"
 ]
@@ -53,14 +61,16 @@ CellTagsIndex->{}
 (*NotebookFileOutline
 Notebook[{
 Cell[CellGroupData[{
-Cell[580, 22, 305, 8, 30, "Input", "ExpressionUUID" -> \
+Cell[580, 22, 161, 3, 101, "Title", "ExpressionUUID" -> \
+"63b93e65-c0b3-48e7-9861-d46e753c102c"],
+Cell[CellGroupData[{
+Cell[766, 29, 305, 8, 30, "Input", "ExpressionUUID" -> \
 "d2795dcd-0dc0-45f7-84a7-34f541eef9e4"],
-Cell[888, 32, 130, 3, 30, "Output", "ExpressionUUID" -> \
+Cell[1074, 39, 130, 3, 30, "Output", "ExpressionUUID" -> \
 "33d38400-c6ca-4be7-bbc6-d3dd2a6e1b07"]
+}, Open  ]]
 }, Open  ]]
 }
 ]
 *)
-
-(* End of internal cache information *)
 
