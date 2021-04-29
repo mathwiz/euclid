@@ -1,0 +1,5 @@
+(defun my-gcd (x y) 
+  (let ((a (if (< x y) y x)) 
+        (b (if (< x y) x y))) 
+    (cond ((= b 0) a) 
+          (t (my-gcd b (mod a b))))))
