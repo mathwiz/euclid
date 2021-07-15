@@ -18,11 +18,16 @@
 
 
 (define f1 (lambda (x) (* x x x)))
-(tangent-at f1 2)
-(tangent-at f1 3)
+(define f2 (lambda (x) (- (sin (* x x)) (* x x x) 1)))
+(tangent-at f2 2)
+(tangent-at f2 3)
 (tangent-at sin .5)
 
 (sin .5)
 (newton-approx sin .5)
 (newton-approx f1 2)
 (newton-approx f1 2 10)
+
+(require plot)
+(plot-new-window? #t)
+(plot (function f2 (- pi) pi))
