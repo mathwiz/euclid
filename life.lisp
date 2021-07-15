@@ -44,7 +44,7 @@
 
 
 (defun main-loop ()
-  (progn (format t "~%Steps to advance (<Ret> = 1, Q to quit) > ")
+  (progn (format t "~%Steps to advance (<Ret> = 1, Q to quit, R randomly populate, G add glider) > ")
          (let ((cmd (read-line)))
            (cond ((equal cmd "t1")
                   (progn (show _GEN1)
