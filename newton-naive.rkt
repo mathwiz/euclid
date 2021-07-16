@@ -1,7 +1,7 @@
 #lang racket
 
-(define (tangent-at f x)
-  ((derivative f) x))
+(define (tangent-at f x [h .0001])
+  ((derivative f h) x))
 
 (define (derivative f [h .0001])
   (lambda (x)
@@ -19,15 +19,21 @@
 
 (define f1 (lambda (x) (* x x x)))
 (define f2 (lambda (x) (- (sin (* x x)) (* x x x) 1)))
-(tangent-at f2 2)
-(tangent-at f2 3)
-(tangent-at sin .5)
 
 (sin .5)
-(newton-approx sin .5)
-(newton-approx f1 2)
-(newton-approx f1 2 10)
+(cos .5)
+(tangent-at sin .5 .001)
+(tangent-at sin .5 .0001)
+(tangent-at sin .5 .00001)
 
-(require plot)
-(plot-new-window? #t)
-(plot (function f2 (- pi) pi))
+(newton-approx cos .5)
+(newton-approx sin .5)
+(newton-approx f2 -1.5)
+(newton-approx f2 -1.5 10)
+
+(cos (/ pi 2))
+(/ pi 2)
+
+;(require plot)
+;(plot-new-window? #t)
+;(plot (function f2 (- pi) pi))
