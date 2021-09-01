@@ -7,7 +7,9 @@ class Machine:
         self.state = 'start'
 
     def __repr__(self):
-        return str(self.quintuples)
+        quintuples = list(self.quintuples.values())
+        quintuples.sort()
+        return str(quintuples)
 
     def init_moves(self):
         self.moves = { -1, 0, 1 }
@@ -27,26 +29,44 @@ class Machine:
         quintuple[0] = quintuple[0].lower()
         quintuple[4] = quintuple[4].lower()
         if (val := quintuple[3]) not in self.moves:
-            raise ValueError(f"Illegal move value: {val}")
+            raise ValueError("Illegal move value: %s" %(val))
         if (val := quintuple[1]) not in self.symbols:
-            raise ValueError(f"Illegal tape read value: {val}")
+            raise ValueError("Illegal tape read value: %s" %(val))
         if (val := quintuple[2]) not in self.symbols:
-            raise ValueError(f"Illegal tape write value: {val}")
+            raise ValueError("Illegal tape write value: %s" %(val))
         if (val := quintuple[0]) not in self.states:
-            raise ValueError(f"Illegal initial state value: {val}")
+            raise ValueError("Illegal initial state value: %s" %(val))
         if (val := quintuple[4]) not in self.states:
-            raise ValueError(f"Illegal successor state value: {val}")
+            raise ValueError("Illegal successor state value: %s" %(val))
         k = quintuple[0], quintuple[1]
         if (k in self.quintuples):
             existing = self.quintuples[k]
-            raise ValueError(f"{k} already exists in {existing}")
+            raise ValueError("%s already exists in %s" %(k, exisiting))
         self.quintuples[k] = quintuple
+        return True
 
-    def get_quintuple(self, symbol):
-        return self.quintuple[(self.state, symbol)]
+    def get_quintuple(self, state, symbol):
+        return self.quintuples[(state, symbol)]
 
-    def exec(self, tape):
-        state = None
+    def set_tape(self, tapeString):
+        self.tape = list(tapeString)
+        self.pos = 0
+
+    def get_tape(self):
+        return "".join(self.tape)
+
+    def step(self):
+        if self.state != 'end':
+            q = self.get_quintuple(self.state, tape[self.pos])
+            self.tape[self.pos] = q[2]
+            self.pos += q[3]
+            self.state = q[4]
+
+    def exec_all(self):
+        while self.state != 'end':
+            self.step()
+            
+        
 
 
 class AddingMachine(Machine):
