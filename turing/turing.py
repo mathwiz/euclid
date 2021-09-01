@@ -59,8 +59,19 @@ class Machine:
         if self.state != 'end':
             q = self.get_quintuple(self.state, tape[self.pos])
             self.tape[self.pos] = q[2]
-            self.pos += q[3]
+            self.change_tape(q[3])
             self.state = q[4]
+
+    def change_tape(self, move):
+        newpos = self.pos + move
+        if newpos < 0:
+            self.tape.insert(0, ' ')
+            newpos = 0
+        elif newpos == len(self.tape):
+            self.tape.insert(newpos, ' ')
+        self.pos = newpos
+
+        
 
     def exec_all(self):
         while self.state != 'end':
