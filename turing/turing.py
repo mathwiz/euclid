@@ -89,10 +89,68 @@ class Machine:
         return self.get_tape()
         
 
-
-class AddingMachine(Machine):
-    def __init__(self, states, symbols):
+class Addition(Machine):
+    def __init__(self, \
+                 states = ['prescan', 'prepaddend', 'reset', 'readdigit', 'add0', 'add1', 'carry1', 'carry0', 'completesum', 'trimend', 'finishtrim', 'checkblank', 'clean'], \
+                 symbols = ['+', '&', '@', '^', '/']):
         Machine.__init__(self, states, symbols)
+        self.add_tuple(['start', '1', '1', 1, 'start'])
+        self.add_tuple(['start', '0', '0', 1, 'start'])
+        self.add_tuple(['start', '+', '+', 1, 'start'])
+        self.add_tuple(['start', ' ', ' ', -1, 'prescan'])
+        self.add_tuple(['prescan', '0', '0', -1, 'prescan'])
+        self.add_tuple(['prescan', '1', '1', -1, 'prescan'])
+        self.add_tuple(['prescan', '+', '+', -1, 'prepaddend'])
+        self.add_tuple(['prepaddend', '1', '&', 1, 'reset'])
+        self.add_tuple(['prepaddend', '0', '@', 1, 'reset'])
+        self.add_tuple(['reset', '/', '/', 1, 'reset'])
+        self.add_tuple(['reset', '&', '&', 1, 'reset'])
+        self.add_tuple(['reset', '@', '@', 1, 'reset'])
+        self.add_tuple(['reset', '^', '^', 1, 'reset'])
+        self.add_tuple(['reset', '+', '+', 1, 'reset'])
+        self.add_tuple(['reset', '0', '0', 1, 'reset'])
+        self.add_tuple(['reset', '1', '1', 1, 'reset'])
+        self.add_tuple(['reset', ' ', ' ', -1, 'readdigit'])
+        self.add_tuple(['readdigit', '/', '/', -1, 'readdigit'])
+        self.add_tuple(['readdigit', '0', '/', -1, 'add0'])
+        self.add_tuple(['readdigit', '1', '/', -1, 'add1'])
+        self.add_tuple(['readdigit', '+', '+', -1, 'completesum'])
+        self.add_tuple(['add0', '+', '+', -1, 'add0'])
+        self.add_tuple(['add0', '0', '0', -1, 'add0'])
+        self.add_tuple(['add0', '1', '1', -1, 'add0'])
+        self.add_tuple(['add0', '&', '1', -1, 'carry0'])
+        self.add_tuple(['add0', '@', '0', -1, 'carry0'])
+        self.add_tuple(['add0', '^', '0', -1, 'carry1'])
+        self.add_tuple(['add1', '+', '+', -1, 'add1'])
+        self.add_tuple(['add1', '0', '0', -1, 'add1'])
+        self.add_tuple(['add1', '1', '1', -1, 'add1'])
+        self.add_tuple(['add1', '&', '0', -1, 'carry1'])
+        self.add_tuple(['add1', '@', '1', -1, 'carry0'])
+        self.add_tuple(['add1', '^', '0', -1, 'carry1'])
+        self.add_tuple(['carry1', '1', '^', 1, 'reset'])
+        self.add_tuple(['carry1', '0', '&', 1, 'reset'])
+        self.add_tuple(['carry1', ' ', '&', 1, 'reset'])
+        self.add_tuple(['carry0', '1', '&', 1, 'reset'])
+        self.add_tuple(['carry0', '0', '@', 1, 'reset'])
+        self.add_tuple(['carry0', ' ', '@', 1, 'reset'])
+        self.add_tuple(['completesum', '1', '1', -1, 'completesum'])
+        self.add_tuple(['completesum', '0', '0', -1, 'completesum'])
+        self.add_tuple(['completesum', '&', '1', -1, 'completesum'])
+        self.add_tuple(['completesum', '^', '1', -1, 'carry1'])
+        self.add_tuple(['completesum', '@', '0', -1, 'completesum'])
+        self.add_tuple(['completesum', ' ', ' ', 1, 'trimend'])
+        self.add_tuple(['trimend', '0', ' ', 1, 'finishtrim'])
+        self.add_tuple(['trimend', '1', '1', 1, 'finishtrim'])
+        self.add_tuple(['finishtrim', '0', '0', 1, 'finishtrim'])
+        self.add_tuple(['finishtrim', '1', '1', 1, 'finishtrim'])
+        self.add_tuple(['finishtrim', '+', '+', -1, 'checkblank'])
+        self.add_tuple(['checkblank', ' ', '0', 1, 'clean'])
+        self.add_tuple(['checkblank', '0', '0', 1, 'clean'])
+        self.add_tuple(['checkblank', '1', '1', 1, 'clean'])
+        self.add_tuple(['clean', '+', ' ', 1, 'clean'])
+        self.add_tuple(['clean', '/', ' ', 1, 'clean'])
+        self.add_tuple(['clean', ' ', ' ', 0, 'end'])
+             
 
 
 class AddOneDigit(Machine):

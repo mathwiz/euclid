@@ -44,3 +44,21 @@ atape = '1011+1'
 print('tape:' + atape)
 run_tape(incrementer, atape)
 
+atape = '1+0'
+print('tape:' + atape)
+run_tape(incrementer, atape)
+
+atape = '0+0'
+print('tape:' + atape)
+run_tape(incrementer, atape)
+
+atape = '1011+0'
+print('tape:' + atape)
+run_tape(incrementer, atape)
+
+
+adder = turing.Addition()
+
+atape = '1011+11111'
+print('tape:' + atape)
+run_tape(adder, atape)
