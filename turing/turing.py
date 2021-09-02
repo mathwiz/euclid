@@ -120,7 +120,7 @@ class Addition(Machine):
         self.add_tuple(['add0', '1', '1', -1, 'add0'])
         self.add_tuple(['add0', '&', '1', -1, 'carry0'])
         self.add_tuple(['add0', '@', '0', -1, 'carry0'])
-        self.add_tuple(['add0', '^', '1', -1, 'carry0'])
+        self.add_tuple(['add0', '^', '1', -1, 'carry1'])
         self.add_tuple(['add1', '+', '+', -1, 'add1'])
         self.add_tuple(['add1', '0', '0', -1, 'add1'])
         self.add_tuple(['add1', '1', '1', -1, 'add1'])
