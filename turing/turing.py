@@ -91,7 +91,7 @@ class Machine:
 
 class Addition(Machine):
     def __init__(self, \
-                 states = ['prescan', 'prepaddend', 'reset', 'readdigit', 'add0', 'add1', 'carry1', 'carry0', 'completesum', 'trimend', 'finishtrim', 'checkblank', 'clean'], \
+                 states = ['prescan', 'prepaddend', 'reset', 'readdigit', 'add0', 'add1', 'carry1', 'carry0', 'completesum', 'trimend', 'finishtrim', 'clean'], \
                  symbols = ['+', '&', '@', '^', '/']):
         Machine.__init__(self, states, symbols)
         self.add_tuple(['start', '1', '1', 1, 'start'])
@@ -120,13 +120,13 @@ class Addition(Machine):
         self.add_tuple(['add0', '1', '1', -1, 'add0'])
         self.add_tuple(['add0', '&', '1', -1, 'carry0'])
         self.add_tuple(['add0', '@', '0', -1, 'carry0'])
-        self.add_tuple(['add0', '^', '0', -1, 'carry1'])
+        self.add_tuple(['add0', '^', '1', -1, 'carry0'])
         self.add_tuple(['add1', '+', '+', -1, 'add1'])
         self.add_tuple(['add1', '0', '0', -1, 'add1'])
         self.add_tuple(['add1', '1', '1', -1, 'add1'])
         self.add_tuple(['add1', '&', '0', -1, 'carry1'])
         self.add_tuple(['add1', '@', '1', -1, 'carry0'])
-        self.add_tuple(['add1', '^', '0', -1, 'carry1'])
+        self.add_tuple(['add1', '^', '1', -1, 'carry1'])
         self.add_tuple(['carry1', '1', '^', 1, 'reset'])
         self.add_tuple(['carry1', '0', '&', 1, 'reset'])
         self.add_tuple(['carry1', ' ', '&', 1, 'reset'])
@@ -143,10 +143,9 @@ class Addition(Machine):
         self.add_tuple(['trimend', '1', '1', 1, 'finishtrim'])
         self.add_tuple(['finishtrim', '0', '0', 1, 'finishtrim'])
         self.add_tuple(['finishtrim', '1', '1', 1, 'finishtrim'])
-        self.add_tuple(['finishtrim', '+', '+', -1, 'checkblank'])
-        self.add_tuple(['checkblank', ' ', '0', 1, 'clean'])
-        self.add_tuple(['checkblank', '0', '0', 1, 'clean'])
-        self.add_tuple(['checkblank', '1', '1', 1, 'clean'])
+        self.add_tuple(['finishtrim', '+', '+', -1, 'clean'])
+        self.add_tuple(['clean', '0', '0', 1, 'clean'])
+        self.add_tuple(['clean', '1', '1', 1, 'clean'])
         self.add_tuple(['clean', '+', ' ', 1, 'clean'])
         self.add_tuple(['clean', '/', ' ', 1, 'clean'])
         self.add_tuple(['clean', ' ', ' ', 0, 'end'])
