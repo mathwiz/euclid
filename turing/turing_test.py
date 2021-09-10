@@ -63,6 +63,6 @@ atape = '1011+11111'
 print('tape:' + atape)
 run_tape(adder, atape)
 
-atape = '0+101'
+atape = '1011+111'
 print('tape:' + atape)
 run_tape(adder, atape)
