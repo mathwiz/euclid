@@ -1,0 +1,38 @@
+#lang racket
+
+(define (integrate fn a b n)
+  (let* ((lower (if (< a b) a b))
+        (upper (if (< a b) b a))
+        (dx (/ (- upper lower) n)))
+    (define (recur x acc)
+      (let* ((height (fn x))
+            (area (* height dx)))
+      (cond ((= x lower) (recur (+ x dx) (+ area acc)))
+            ((>= x upper) (/ (+ area acc) 2))
+            (else (recur (+ x dx) (+ (* 2 area) acc))))))
+    (cond ((= a b) 0)
+          ((< b a) (* -1 (recur b 0)))
+          (else (recur a 0)))))
+
+
+(define (trapezoid fn a b n)
+  (let* ((lower (if (< a b) a b))
+        (upper (if (< a b) b a))
+        (dx (/ (- upper lower) n)))
+    (define (recur x acc)
+      (let* ((height (fn x))
+            (area (* height dx)))
+      (cond ((= x lower) (recur (+ x dx) (+ area acc)))
+            ((>= x upper) (/ (+ area acc) 2))
+            (else (recur (+ x dx) (+ (* 2 area) acc))))))
+    (cond ((= a b) 0)
+          ((< b a) (* -1 (recur b 0)))
+          (else (recur a 0)))))
+
+(define (f1 x) (* x x))
+
+(trapezoid f1 1 4 10)
+(trapezoid f1 4 1 10)
+(trapezoid log 1 4 10)
+(trapezoid log 1 4 50)
+(trapezoid log 1 4 100)
