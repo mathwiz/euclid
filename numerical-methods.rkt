@@ -31,8 +31,8 @@
 
 (define (f1 x) (* x x))
 
-(trapezoid f1 1 4 10)
-(trapezoid f1 4 1 10)
+(exact->inexact (trapezoid f1 1 4 10))
+(exact->inexact (trapezoid f1 4 1 10))
 (trapezoid log 1 4 10)
 (trapezoid log 1 4 50)
 (trapezoid log 1 4 100)
