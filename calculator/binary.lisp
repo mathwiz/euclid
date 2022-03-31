@@ -22,10 +22,10 @@
 (*
  (expt 10 0)
  (sigma i 0 7 1
-   (let ((currfactor (expt 2.0 (- 7 i)))) 
+   (let ((foo (expt 2.0 (- 7 i)))) 
      (if (= (truncate (/ (abs (g 'd)) 
-                         (+ currfactor))) 
+                         (l 'f (expt 2.0 (- 7 i)) ))) 
             1) 
-         (+ (* 0 (l 'd (- (g 'd) (+ currfactor)))) 
+         (+ (* 0 (l 'd (- (g 'd) (g 'f)))) 
             (expt 10.0 (- (1+ i))))
          0)))))
