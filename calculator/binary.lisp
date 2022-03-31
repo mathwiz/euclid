@@ -6,10 +6,18 @@
                                           (expt 10 (1+ i)))) 10) 1)
                      (expt 2 (- 7 i)) 0)))
 
+(defun blist-to-d (digits)
+  (labels ((recur (l i acc)
+      (cond ((null l) acc) 
+            ((= 0 (car l)) (recur (cdr l) (1+ i) acc))
+            ('t (recur (cdr l) (1+ i) (+ (expt 2 i) acc))))))
+    (recur (reverse digits) 0 0)))
+
 (defun b-to-d (b)
   (sigma i 0 7 1 (if (= (mod (truncate (* (abs b)
                                           (expt 10 (1+ i)))) 10) 1)
-                     (expt 2 (- 7 i)) 0)))
+                     (expt 2 (+ (* 8 (truncate b)) (- 7 i))) 
+                     0)))
 
 ;; Solver simulation
 (defparameter dict (make-hash-table))
