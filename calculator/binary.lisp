@@ -11,11 +11,12 @@
                                           (expt 10 (1+ i)))) 10) 1)
                      (expt 2 (- 7 i)) 0)))
 
-(defparameter curr (make-hash-table))
+;; Solver simulation
+(defparameter dict (make-hash-table))
 
-(defun g (k) (gethash k curr))
+(defun g (k) (gethash k dict))
 
-(defun l (k v) (setf (gethash k curr) v) v)
+(defun l (k v) (setf (gethash k dict) v) v)
 
 (defun d-to-b (d)
 (l 'd d)
