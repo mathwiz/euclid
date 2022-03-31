@@ -13,17 +13,19 @@
 
 (defparameter curr (make-hash-table))
 
-(defun g () (gethash 'n curr))
+(defun g (k) (gethash k curr))
 
-(defun l (v) (setf (gethash 'n curr) v) v)
+(defun l (k v) (setf (gethash k curr) v) v)
 
 (defun d-to-b (d)
-(l d)
+(l 'd d)
 (*
- (expt 10 8)
+ (expt 10 0)
  (sigma i 0 7 1
-   (let ((currnum (g)) 
-         (currfactor (expt 2.0 (- 7 i)))) 
-     (if (= (truncate (/ (abs (+ currnum)) currfactor)) 1) 
-         (+ (* 0 (l (- currnum currfactor))) 
-            (expt 10.0 (- (1+ i)))) 0)))))
+   (let ((currfactor (expt 2.0 (- 7 i)))) 
+     (if (= (truncate (/ (abs (g 'd)) 
+                         (+ currfactor))) 
+            1) 
+         (+ (* 0 (l 'd (- (g 'd) (+ currfactor)))) 
+            (expt 10.0 (- (1+ i))))
+         0)))))
