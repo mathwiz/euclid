@@ -1,5 +1,15 @@
+;; Solver simulation
+(defparameter dict (make-hash-table))
+
+(defun g (k) (gethash k dict))
+
+(defun l (k v) (setf (gethash k dict) v) v)
+
 (defmacro sigma (var beg end inc &body body)
   `(loop for ,var from ,beg to ,end by ,inc sum ,@body))
+
+
+;; Binary
 
 (let ((d 0.11001001))
   (sigma i 0 7 1 (if (= (mod (truncate (* (abs d)
@@ -19,13 +29,6 @@
                      (expt 2 (+ (* 8 (truncate b)) (- 7 i))) 
                      0)))
 
-;; Solver simulation
-(defparameter dict (make-hash-table))
-
-(defun g (k) (gethash k dict))
-
-(defun l (k v) (setf (gethash k dict) v) v)
-
 (defun d-to-b (d)
 (l 'd d)
 (*
@@ -38,3 +41,12 @@
          (+ (* 0 (l 'd (- (g 'd) (g 'f)))) 
             (expt 10.0 (- (1+ i))))
          0)))))
+
+(defun byte-height (d)
+  (+
+   (* 0 (l 'd (truncate (abs d))))
+   (if (> (g 'd) (expt 2 32))
+       -1
+       (if 0
+           1
+           2))))
