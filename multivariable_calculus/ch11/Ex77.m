@@ -1,6 +1,8 @@
 function Ex77
-  pol_to_comp(1, pi/6)
-  sum(0,0)
+  u = pol2comp(1, pi/6);
+  v = pol2comp(1, pi/3);
+  sum(u, v)
+  u + v
   printf("done\n")
 endfunction
 

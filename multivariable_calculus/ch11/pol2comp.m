@@ -1,4 +1,4 @@
-function VAL = pol_to_comp(len, theta)
+function VAL = pol2comp(len, theta)
   VAL = [ len * cos(theta), len * sin(theta) ];
 endfunction
 
