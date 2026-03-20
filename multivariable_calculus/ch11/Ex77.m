@@ -1,10 +1,7 @@
 function Ex77
-  sum(1,0,1,pi)
+  pol_to_comp(1, pi/6)
+  sum(0,0)
   printf("done\n")
 endfunction
 
-
-function VAL = sum(u_len, u_theta, v_len, v_theta)
-  VAL = -1;
-endfunction
 
