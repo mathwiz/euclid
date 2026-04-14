@@ -2,6 +2,14 @@ function Ex77
   result = ex77_helper(1, pi/6, 1, pi/3);
   printf("vector: [%f, %f]; length: %f; theta: %f\n", result(1),
          result(2), result(3), result(4));
+
+  result = ex77_helper(1, 0, 1, pi/2);
+  printf("vector: [%f, %f]; length: %f; theta: %f\n", result(1),
+         result(2), result(3), result(4));
+
+  result = ex77_helper(1, pi/3, 1, pi/3);
+  printf("vector: [%f, %f]; length: %f; theta: %f\n", result(1),
+         result(2), result(3), result(4));
 endfunction
 
 function VAL = ex77_helper(ulen, utheta, vlen, vtheta)
