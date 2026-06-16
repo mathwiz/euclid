@@ -1,5 +1,5 @@
-function VAL = comp2pol(v)
-  len = norm(v);
-  theta = atan(v(2) / v(1));;
+function VAL = comp2pol(vec)
+  len = norm(vec);
+  theta = atan(vec(2) / vec(1));
   VAL = [ len, theta ];
 endfunction
