@@ -15,7 +15,7 @@ endfunction
 function VAL = ex77_helper(ulen, utheta, vlen, vtheta)
   u = pol2comp(ulen, utheta);
   v = pol2comp(vlen, vtheta);
-  w = sum(u, v);
+  w = u + v;
   VAL =  [w, comp2pol(w)];
 endfunction
 
